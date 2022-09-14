@@ -54,10 +54,28 @@ passwordInput.addEventListener('invalid', () => {
   }
 });
 
+const confirmPassword = document.getElementById('confirmpassword');
+
+confirmPassword.addEventListener('input', () => {
+  confirmPassword.setCustomValidity('');
+  confirmPassword.checkValidity();
+});
+
 function matchPassword() {
-  const confirmPassword = document.getElementById('confirmpassword');
-  if (confirmPassword.value !== passwordInput.value) {
-    alert('Passwords do not match.');
+  if ((confirmPassword.value !== '')
+  && (passwordInput.value !== '')
+  && (confirmPassword.value !== passwordInput.value)) {
+    confirmPassword.setCustomValidity('Passwords do not match.');
+  } else if ((passwordInput !== '')
+  && (confirmPassword.value === '')) {
+    confirmPassword.setCustomValidity('You must confirm your password.');
+  } else if ((emailInput.checkValidity())
+  && (countryInput.checkValidity())
+  && (zipInput.checkValidity())
+  && (passwordInput.checkValidity())
+  && (confirmPassword.checkValidity())
+  && (confirmPassword.value === passwordInput.value)) {
+    alert('Form Submitted!');
   }
 }
 
