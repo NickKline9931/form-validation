@@ -1,0 +1,11 @@
+input {
+    border: 2px solid black;
+}
+
+input:not(:placeholder-shown):invalid {
+    border: 2px solid red;
+}
+
+input:valid {
+    border: 2px solid rgb(0, 231, 0)
+}
