@@ -1,5 +1,6 @@
 input {
     border: 2px solid black;
+    outline: 1px solid black;
 }
 
 input:not(:placeholder-shown):invalid {
