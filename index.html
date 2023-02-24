@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="style.css"></link>
 </head>
 <body>
+    <h1>Sign Up</h1>
     <form>
         <fieldset>
             <label for="email">Email:</label>
@@ -16,7 +17,11 @@
 
         <fieldset>
             <label for="country">Country:</label>
-            <input type="text" name="country" id="country" placeholder="Country" required>
+            <select name="country" id="country" placeholder="Country" required>
+                <option value="United States">United States</option>
+                <option value="Canada">Canada</option>
+                <option value="Mexico">Mexico</option>
+            </select>
         </fieldset>
 
         <fieldset>
@@ -38,7 +43,6 @@
             <label for="confirmpassword">Confirm Password:</label>
             <input type="password" name="confirmpassword" id="confirmpassword" placeholder="12345678" required>
         </fieldset>
-        
         <button id="submitbutton">Submit</button>
     </form>
     
